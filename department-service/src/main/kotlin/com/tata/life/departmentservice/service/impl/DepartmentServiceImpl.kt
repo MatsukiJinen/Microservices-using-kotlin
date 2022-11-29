@@ -14,5 +14,5 @@ class DepartmentServiceImpl: DepartmentService {
 
     override fun save(department: Department): Department = repository.save(department)
 
-    override fun findById(id: Long): Department = repository.findById(id).get()
+    override fun findById(id: Long): Department = repository.findByDepartmentId(id)
 }
