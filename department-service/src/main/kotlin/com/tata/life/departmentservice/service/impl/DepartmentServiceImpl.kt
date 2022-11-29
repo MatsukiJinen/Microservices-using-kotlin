@@ -12,7 +12,7 @@ class DepartmentServiceImpl: DepartmentService {
     @Autowired
     lateinit var repository: DepartmentRepository
 
-    override fun save(department: Department): Department {
-        return repository.save(department)
-    }
+    override fun save(department: Department): Department = repository.save(department)
+
+    override fun findById(id: Long): Department = repository.findById(id).get()
 }
