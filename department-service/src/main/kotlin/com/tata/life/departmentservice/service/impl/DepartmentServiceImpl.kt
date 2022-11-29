@@ -7,11 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class DepartmentServiceImpl: DepartmentService {
-
-    @Autowired
-    lateinit var repository: DepartmentRepository
-
+class DepartmentServiceImpl(
+    private val repository: DepartmentRepository
+): DepartmentService {
     override fun save(department: Department): Department = repository.save(department)
 
     override fun findById(id: Long): Department = repository.findByDepartmentId(id)

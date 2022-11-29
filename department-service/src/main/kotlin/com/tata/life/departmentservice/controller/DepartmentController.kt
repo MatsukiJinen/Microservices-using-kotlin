@@ -9,11 +9,9 @@ import org.springframework.web.bind.annotation.*
 @RestController
 @RequestMapping("/departments")
 @Slf4j
-class DepartmentController {
-    
-    @Autowired
-    lateinit var service: DepartmentService
-
+class DepartmentController(
+    private val service: DepartmentService
+) {
     @PostMapping("/")
     fun saveDepartment(@RequestBody department: Department): Department = service.save(department)
 
