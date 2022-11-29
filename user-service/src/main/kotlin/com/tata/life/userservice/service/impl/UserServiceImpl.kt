@@ -3,6 +3,7 @@ package com.tata.life.userservice.service.impl
 import com.tata.life.userservice.dto.Department
 import com.tata.life.userservice.dto.ResponseDto
 import com.tata.life.userservice.entity.User
+import com.tata.life.userservice.repository.UserRepository
 import com.tata.life.userservice.service.UserService
 import org.springframework.stereotype.Service
 import org.springframework.web.client.RestTemplate
