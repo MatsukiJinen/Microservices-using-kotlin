@@ -4,5 +4,5 @@ import com.tata.life.userservice.entity.User
 
 data class ResponseDto(
     val user: User,
-    val department: Department
+    val department: Department?
 )
